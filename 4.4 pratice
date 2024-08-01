@@ -1,0 +1,18 @@
+ package project;
+import java.util.Random;
+
+
+public class rock {
+	public static void main(String[] args)
+	{  
+		Random r=new Random();
+		int sc=r.nextInt(3);
+		if( sc==0)
+			System.out.println("rock");
+		if (sc==1)
+			System.out.println("paper");
+		else
+			System.out.println("sicssior");
+	}
+
+}
