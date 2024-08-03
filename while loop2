@@ -1,0 +1,24 @@
+package project;
+import java.util.Scanner;
+
+
+public class whileloop2
+{
+	    public static void main(String[] args) {
+	        Scanner input = new Scanner(System.in);
+	        double number = -1;
+
+	        while (number < 0) 
+	        {
+	            System.out.print("Type a non-negative integer: ");
+	            number = input.nextDouble();
+
+	            if (number < 0)
+	            {
+	                System.out.println("Invalid number, try again.");
+	            }
+	        }
+	        double squareRoot = Math.sqrt(number);
+	        System.out.println("The square root of " + number + " is " + squareRoot); 
+	}
+}
