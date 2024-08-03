@@ -1,0 +1,27 @@
+package project;
+import java.util.Scanner;
+
+
+public class exe2 {
+
+
+	    public static void main(String[] args) 
+	    {
+	        Scanner input = new Scanner(System.in);
+	        int sum = 0;
+	        int count = 0;
+
+	        System.out.println("Enter 10 integers:");
+
+	        do 
+	        {
+	            int num = input.nextInt();
+	            sum += num;
+	            count++;
+	        } while (count < 10);
+
+	        System.out.println("Sum of the 10 integers is: " + sum);
+	    }
+	}
+
+
