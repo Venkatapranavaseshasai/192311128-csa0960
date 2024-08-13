@@ -1,0 +1,103 @@
+SECTION 6
+1.
+package pin;
+import java.util.Scanner;
+public class Pin {
+	public static void main(String[] args) {
+        int validPin = 1234;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your PIN: ");
+
+        int enteredPin = scanner.nextInt();
+
+        while (enteredPin != validPin) {
+            System.out.print("Invalid PIN. Try again: ");
+            enteredPin = scanner.nextInt();
+        }
+        System.out.println("Correct PIN entered. You now have access to your account.");
+    }
+}
+ 
+2. 
+package multiple;
+import java.util.Scanner;
+
+public class Multiple {
+	 public static void main(String[] args) {
+	        // Create a Scanner object to read user input
+	        Scanner scanner = new Scanner(System.in);
+
+	        // Prompt the user to enter a number
+	        System.out.print("Choose a number: ");
+
+	        // Read the user's input and store it in a variable
+	        int number = scanner.nextInt();
+
+	        // Use a for loop to display the multiples of the number from 1 to 12
+	        for (int i = 1; i <= 12; i++) {
+	            int multiple = number * i;
+	            System.out.println(number + "x" + i + " = " + multiple);
+	        }
+	    }
+}
+ 
+3.
+package loopshape;
+
+public class Loopshape {
+	 public static void createRectangle(int width, int height) {
+	        if (width < 1 || height < 1) {
+	            System.out.println("Cannot draw a shape with a dimension less than 1.");
+	            return;
+	        }
+
+	        // Print the top border
+	        for (int i = 0; i < width; i++) {
+	            System.out.print("#");
+	        }
+	        System.out.println();
+
+	        // Print the middle rows
+	        for (int i = 0; i < height - 2; i++) {
+	            System.out.print("#");
+	            for (int j = 0; j < width - 2; j++) {
+	                System.out.print(" ");
+	            }
+	            System.out.println("#");
+	        }
+
+	        // Print the bottom border
+	        if (height > 1) {
+	            for (int i = 0; i < width; i++) {
+	                System.out.print("#");
+	            }
+	            System.out.println();
+	        }
+	    }
+
+	    public static void createTriangle(int size) {
+	        if (size < 1) {
+	            System.out.println("Cannot draw a shape with a dimension less than 1.");
+	            return;
+	        }
+
+	        // Print the triangle
+	        for (int i = 0; i < size; i++) {
+	            for (int j = 0; j <= i; j++) {
+	                System.out.print("#");
+	            }
+	            System.out.println();
+	        }
+	    }
+
+	    public static void main(String[] args) {
+	        createRectangle(5, 4);
+	        System.out.println();
+	        createTriangle(5);
+}
+}
+ 
+
+
